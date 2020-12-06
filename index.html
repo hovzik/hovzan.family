@@ -7,39 +7,62 @@
 	
 	
 	<style type="text/css">
+		
 		html {
-			background-color: #4A525A;
+			background-color: #fff;
 		}
+		
 		* {
 			font-family: 'Inconsolata', monospace;
 			color: #eee;
 			/*font-size: 0.9rem;*/
 			/*line-height: 1.3rem;*/
 		}
+		
 		a {
 			color: inherit;
 		}
+		
 		a:hover {
 			box-shadow: 2px 0 0 #eee, -2px 0 0 #eee;
 			background-color: #eee;
 			color: #4A525A;
 			text-decoration: none;
 		}
-		.temp {
-			width: 450px;
-			height: 150px;
-			margin: auto;
-			/*padding: 20px 20px 20px 20px;*/
-			position: absolute; /*it can be fixed too*/
-	        	left:0; right:0;
-        		top:0; bottom:0;
-        		margin:auto;
-			
-			/*this to solve "the content will not be cut when the window is smaller than the content": */
-	        	max-width:90%;
-        		max-height:90%;
-        		overflow:auto;
+		
+		#header {
+			display: block;
+			position: relative;
+			height: 10vh;
+			max-height: 200px;
+			width: 100vw;
+			top: 0;
 		}
+		
+		#logo {
+			position: absolute;
+			height: 100%;
+			left: 50%;
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+		}
+		
+		.temp {
+			display: block;
+			width: 100vw;
+			height: 90vh;
+			position: relative;
+		}
+		
+		#tree {
+			position: absolute;
+			width: 100%;
+			height: auto;
+			top: 50%;
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+		
 		p {
 			display: block;
 			vertical-align: middle;
@@ -47,10 +70,13 @@
 	</style>
 </head>
 <body>
+	
+	<div id="header">
+		<img id="logo" src="logo.jpg">
+	</div>
+	
 	<div class="temp">
-		<p>danylo is working on his family's new website...</p>
-		<p>but you can <a href="mailto:hovzik@gmail.com">email</a> him, find him on <a href="https://www.facebook.com/hovzik">facebook</a>, <a href="https://www.twitter.com/hovzik">twitter</a>, or like his photos on <a href="https://www.instagram.com/hovzik/">instagram</a>.</p>
-		<a href="My-Family-2-Dec-2020-267.html">test</a>
+		<img id="tree" src="tree.jpg">
 	</div>
 </body>
 </html>
